@@ -4,16 +4,12 @@ const returnMathResult = (first: number, second: number, operation: string) => {
 	switch (operation) {
 		case "+":
 			return first + second
-			break
 		case "-":
 			return first - second
-			break
 		case "X":
 			return first * second
-			break
 		case "/":
 			return first / second
-			break
 		default: return false
 	}
 }
@@ -39,7 +35,8 @@ export const useCalculator = () => {
 				setCurrentValue(0)
 				setSavedValue(0)
 			} else {
-				setSavedValue(result)
+				const fixedResult = Number((result).toFixed(15));
+				setSavedValue(fixedResult)
 				setCurrentValue(0)
 				setOperation(key)
 				setDisplayedValue("")
@@ -70,7 +67,8 @@ export const useCalculator = () => {
 			if (!result || result === Infinity) {
 				setDisplayedValue("Не определено")
 			} else {
-				setDisplayedValue(result.toString().replace('.', ','))
+				const fixedResult = Number((result).toFixed(15));
+				setDisplayedValue(fixedResult.toString().replace('.', ','))
 				setCurrentValue(result)
 			}
 		}
