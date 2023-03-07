@@ -1,0 +1,11 @@
+.navigationWrap {
+  display: flex;
+  justify-content: center;
+
+  .nav {
+    padding: 1px;
+    border-radius: 6px;
+    background-color: var(--neutral-3);
+    display: flex;
+  }
+}

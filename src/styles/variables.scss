@@ -1,0 +1,24 @@
+%colors {
+  --primary-blue: #5D5FEF;
+
+  --neutral-1: #FFFFFF;
+  --neutral-2: #E2E3E5;
+  --neutral-3: #F3F4F6;
+  --neutral-4: #4D5562;
+  --neutral-5: #C4C4C4;
+  --neutral-6: #6B7280;
+}
+
+%variables {
+  --box-shadow-1: 0px 4px 6px 0px #0000001A;
+  --box-shadow-2: 0px 2px 4px 0px #0000000F;
+
+  --background-primary: "";
+  --background-secondary: "";
+
+  --accent: var(--neutral-2);
+  --display-color: var(--neutral-3);
+  --nav-color: var(--neutral-4);
+  --preview-border-color: var(--neutral-5);
+  --preview-placeholder-text: var(--neutral-6);
+}

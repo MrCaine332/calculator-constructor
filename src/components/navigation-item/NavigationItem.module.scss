@@ -1,0 +1,26 @@
+.navItem {
+  font-size: 14px;
+  line-height: 15px;
+
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--neutral-4);
+  text-decoration: none;
+  height: 38px;
+
+  svg {
+    stroke: var(--neutral-4);
+    fill: none;
+  }
+
+  &_active {
+    border: 1px solid var(--neutral-2);
+    background-color: white;
+    svg {
+      stroke: var(--primary-blue);
+    }
+  }
+}

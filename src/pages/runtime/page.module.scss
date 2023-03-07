@@ -1,0 +1,12 @@
+.runtime {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .calculatorPart {
+    width: 240px;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: var(--box-shadow-1);
+  }
+}
