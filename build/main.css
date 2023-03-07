@@ -1,0 +1,21 @@
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Poppins:wght@400;500;600;700&display=swap);
+.page-module__constructor{display:flex;gap:32px}
+
+.CalculatorParts-module__calculatorParts{padding:8px;display:grid;gap:8px}
+
+.CalculatorPreview-module__calculatorPreview{height:452px;width:244px;padding:2px;border:2px dashed var(--preview-border-color);border-radius:6px;display:flex;flex-direction:column;gap:8px}.CalculatorPreview-module__calculatorPreview_canDrop{background-color:#F0F9FF}.CalculatorPreview-module__calculatorPreview .CalculatorPreview-module__placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}.CalculatorPreview-module__calculatorPreview .CalculatorPreview-module__placeholder svg{fill:black}.CalculatorPreview-module__calculatorPreview .CalculatorPreview-module__placeholder .CalculatorPreview-module__textTop{font-style:normal;font-weight:500;font-size:14px;line-height:17px;text-align:center;color:var(--primary-blue)}.CalculatorPreview-module__calculatorPreview .CalculatorPreview-module__placeholder .CalculatorPreview-module__textBottom{font-style:normal;font-weight:400;font-size:12px;line-height:15px;text-align:center;color:var(--preview-placeholder-text)}
+
+.Calculator-module__calculatorPart{width:240px;padding:4px;border-radius:4px;box-shadow:var(--box-shadow-1)}.Calculator-module__calculatorPart_dragged{opacity:0.5}.Calculator-module__calculatorPart_placed{opacity:0.25;pointer-events:none}.Calculator-module__calculatorDisplay{overflow:hidden;width:100%;height:52px;background-color:var(--display-color);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;font-size:36px;line-height:44px;padding:4px 8px;font-weight:800}.Calculator-module__calculatorDisplay_small{font-size:19px}.Calculator-module__calculatorOperations{display:flex;gap:8px}.Calculator-module__calculatorNumbers{display:grid;gap:8px;grid-template-columns:1fr 1fr 1fr;grid-template-rows:repeat(4, 1fr)}.Calculator-module__calculatorNumbers .Calculator-module__buttonDouble{grid-column-start:1;grid-column-end:3}.Calculator-module__calculatorEquals .Calculator-module__calculatorEqualsButton{height:64px;background-color:var(--primary-blue);color:white}.Calculator-module__clickable{cursor:pointer}
+
+.CalculatorButton-module__calculatorButton{height:48px;width:100%;background-color:transparent;border:1px solid var(--accent);border-radius:6px;display:grid;place-items:center}.CalculatorButton-module__calculatorButton_clickable{cursor:pointer}
+
+.page-module__runtime{display:flex;flex-direction:column;gap:8px}.page-module__runtime .page-module__calculatorPart{width:240px;padding:4px;border-radius:4px;box-shadow:var(--box-shadow-1)}
+
+.Navigation-module__navigationWrap{display:flex;justify-content:center}.Navigation-module__navigationWrap .Navigation-module__nav{padding:1px;border-radius:6px;background-color:var(--neutral-3);display:flex}
+
+.NavigationItem-module__navItem{font-size:14px;line-height:15px;padding:8px 12px;border-radius:5px;display:flex;align-items:center;gap:10px;color:var(--neutral-4);text-decoration:none;height:38px}.NavigationItem-module__navItem svg{stroke:var(--neutral-4);fill:none}.NavigationItem-module__navItem_active{border:1px solid var(--neutral-2);background-color:white}.NavigationItem-module__navItem_active svg{stroke:var(--primary-blue)}
+
+:root{--primary-blue: #5D5FEF;--neutral-1: #FFFFFF;--neutral-2: #E2E3E5;--neutral-3: #F3F4F6;--neutral-4: #4D5562;--neutral-5: #C4C4C4;--neutral-6: #6B7280}:root{--box-shadow-1: 0px 4px 6px 0px #0000001A;--box-shadow-2: 0px 2px 4px 0px #0000000F;--background-primary: "";--background-secondary: "";--accent: var(--neutral-2);--display-color: var(--neutral-3);--nav-color: var(--neutral-4);--preview-border-color: var(--neutral-5);--preview-placeholder-text: var(--neutral-6)}html,body{font-family:'Poppins', sans-serif}*{margin:0;padding:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}.app{display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center;padding:32px 0}.container{display:flex;flex-direction:column;gap:30px}
+
+
+/*# sourceMappingURL=main.css.map*/
