@@ -20,37 +20,34 @@ export const useCalculator = () => {
 	const [savedValue, setSavedValue] = useState<number>(0)
 	const [operation, setOperation] = useState<string | null>(null)
 
+	const setStates = (operation: string | null,
+	                   savedValue: number,
+	                   currentValue: number,
+	                   displayedValue: string) => {
+		setOperation(operation)
+		setSavedValue(savedValue)
+		setCurrentValue(currentValue)
+		setDisplayedValue(displayedValue)
+	}
+
 	const onOperationClick = (key: string) => {
 		if (!operation || operation === "=") {
-			setOperation(key)
-			setSavedValue(currentValue)
-			setCurrentValue(0)
-			setDisplayedValue("")
+			setStates(key, currentValue, 0, "")
 		}
 		if (operation && operation !== "=") {
 			const result = returnMathResult(savedValue, currentValue, operation)
 			if (!result || result === Infinity) {
-				setDisplayedValue("Не определено")
-				setOperation("=")
-				setCurrentValue(0)
-				setSavedValue(0)
+				setStates("=", 0, 0, "Not calculated")
 			} else {
 				const fixedResult = Number((result).toFixed(15));
-				setSavedValue(fixedResult)
-				setCurrentValue(0)
-				setOperation(key)
-				setDisplayedValue("")
+				setStates(key, fixedResult, 0, "")
 			}
 		}
 	}
 
 	const onNumberClick = (key: string) => {
 		if (operation === "=") {
-			setOperation(null)
-
-			setDisplayedValue(key)
-			setSavedValue(0)
-			setCurrentValue(parseFloat(key))
+			setStates(null, 0, parseFloat(key), key)
 		} else {
 			const nextDisplayedValue = displayedValue + key
 			setDisplayedValue(prevState => prevState + key)
@@ -65,7 +62,7 @@ export const useCalculator = () => {
 		if (operation) {
 			const result = returnMathResult(savedValue, currentValue, operation)
 			if (!result || result === Infinity) {
-				setDisplayedValue("Не определено")
+				setDisplayedValue("Not calculated")
 			} else {
 				const fixedResult = Number((result).toFixed(15));
 				setDisplayedValue(fixedResult.toString().replace('.', ','))

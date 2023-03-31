@@ -33,8 +33,8 @@ const CalculatorPreview: React.FC<ICalculatorPreview> = ({ children }) => {
 				{ React.Children.count(children) === 0
 					? <div className={styles.placeholder}>
 						<Icons name={"add"} size={20} />
-						<p className={styles.textTop}>Перетащите сюда</p>
-						<p className={styles.textBottom}>любой элемент<br/>из левой панели</p>
+						<p className={styles.textTop}>Drag any element</p>
+						<p className={styles.textBottom}>from left panel</p>
 					</div>
 					: null }
 				{children}
